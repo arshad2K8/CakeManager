@@ -11,6 +11,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletException;
@@ -47,14 +48,18 @@ public class DatabaseLoader implements CommandLineRunner {
 
                 Cake cake = getCakeEntity(parser);
                 LOGGER.info("Constructed cakeEntity {}", cake);
-                cakeRepository.save(cake);
+                try {
+                    cakeRepository.save(cake);
+                } catch (DataIntegrityViolationException e) {
+                    LOGGER.error("Looks like duplicate entry found with inserting cake {}", cake);
+                }
 
                 nextToken = parser.nextToken();
                 LOGGER.info("nextToken {}", nextToken);
                 nextToken = parser.nextToken();
                 LOGGER.info("nextToken {}", nextToken);
-                LOGGER.info("init finished");
             }
+            LOGGER.info("init finished");
         } catch (IOException e) {
             LOGGER.error("Exception during JsonParser ", e);
             throw new ServletException(e);

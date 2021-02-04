@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: CakeManager
+  data:
+    rest:
+      base-path: /api
+  h2:
+    console:
+      enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: a3fd6022d553aa20b92b
+            clientSecret: ac7bae447819f78d8e4a4fe51c4c02458be2faee
+---
