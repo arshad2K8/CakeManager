@@ -2,4 +2,5 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("cakeManager"));
+ReactDOM.render(<App loggedinuser={document.getElementById('loggedinuser').innerHTML}/>,
+        document.getElementById("cakeManager"));

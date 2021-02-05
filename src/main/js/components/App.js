@@ -83,7 +83,7 @@ class App extends React.Component {
 
         return (
             <div className="flex-container">
-                <div> Welcome To Cake Manager App</div>
+                <div> Hello {this.props.loggedinuser} Welcome To Cake Manager App </div>
                 {cakes}
                 <CreateDialog attributes={this.state.attributes} onCreate={this.onCreate}/>
             </div>
