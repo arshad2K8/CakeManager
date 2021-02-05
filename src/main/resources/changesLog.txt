@@ -1,0 +1,20 @@
+
+1)
+Spring Data Barebones Setup with one entity first and made sure api links were working fine.
+
+2)
+Bit of Exception handling , added Controller Advice to catch Data Access Exceptions
+
+3)
+Started setting up basic react app , made sure I can invoke home Page fine
+
+4)
+More time spent on frontend breaking down tabular view of Cakes  into several React Components
+
+5)
+Enabled OAuth2 using Spring Security and Github
+
+6)
+Manage to add few integration tests using spring Boot Test
+
+7) Would love to do some sort of test containerization but , busy days at  office this week :(

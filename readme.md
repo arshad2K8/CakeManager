@@ -9,7 +9,23 @@
 
 * If you want to run Un-Authorized version of app please pass in Spring profile `-Dspring.profiles.active=local-noauth`
 
-# Add New Cake Using Curl
-curl -X POST localhost:8080/api/cakes -d "{\"title\": \"CakeTitle1\", \"image\": \"CakeI mage1\", \"description\": \"CakeDescription1\"}" -H "Content-Type:application/json"
+# Tech Stack
+* Backend for this App is using Spring Data Rest
+* `https://docs.spring.io/spring-data/rest/docs/current/reference/html/#intro-chapter`
+* For frontend its React.
 
+# CRUD Endpoints
+* GET CAKES
+`curl http://localhost:8080/api/cakes`
+  
+
+* POST CAKES
+`curl -X POST localhost:8080/api/cakes -d "{\"title\": \"CakeTitle1\", \"image\": \"CakeI mage1\", \"description\": \"CakeDescription1\"}" -H "Content-Type:application/json"`
+  
+
+* DELETE CAKE
+curl -X DELETE http://localhost:8080/api/cakes/20
+  
+
+* Spring Security - OAuth2 - Github
 
