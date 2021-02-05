@@ -13,12 +13,18 @@
 * Backend for this App is using Spring Data Rest
 * `https://docs.spring.io/spring-data/rest/docs/current/reference/html/#intro-chapter`
 * For frontend its React.
+* App is secured by Oauth2 via Github
 
-# CRUD Endpoints
+
+## Home Page
+* `http://localhost:8080`
+
+* If you browse the endpoint `http://localhost:8080/cakes` , you will be able to download cakes as json file
+
+## CRUD Endpoints  
 * GET CAKES
 `curl http://localhost:8080/api/cakes`
   
-
 * POST CAKES
 `curl -X POST localhost:8080/api/cakes -d "{\"title\": \"CakeTitle1\", \"image\": \"CakeI mage1\", \"description\": \"CakeDescription1\"}" -H "Content-Type:application/json"`
   
